@@ -22,7 +22,7 @@ public class Main extends PApplet {
 		size(1600, 900, P3D);
 		registerMethod("keyEvent", this);
 		noSmooth();
-		Main.minecraft = new Minecraft(this);
+		minecraft = new Minecraft(this);
 	}
 	
 	public void setup() {
@@ -40,8 +40,8 @@ public class Main extends PApplet {
 	public void draw() {
 		noCursor();
 		background(140, 190, 255);
-		Main.minecraft.getPlayer().update();
-		Main.minecraft.getRenderer().draw();
+		minecraft.getPlayer().update();
+		minecraft.getRenderer().draw();
 	}
 	
 	public void dispose() {
